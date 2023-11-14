@@ -1,5 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeVue from '@/views/Home.vue'
+import HawaiiVue from '@/views/Hawaii.vue'
+import BrazilVue from '@/views/Brazil.vue'
+import JamaicaVue from '@/views/Jamaica.vue'
+import PanamaVue from '@/views/Panama.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,16 +11,28 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeVue
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
-    }
+      path: '/1/brazil',
+      name: 'brazil',
+      component: BrazilVue
+    },
+    {
+      path: '/1/panama',
+      name: 'panama',
+      component: PanamaVue
+    },
+    {
+      path: '/1/hawaii',
+      name: 'hawaii',
+      component: HawaiiVue
+    },
+    {
+      path: '/1/jamaica',
+      name: 'jamaica',
+      component: JamaicaVue
+    },
   ]
 })
 
