@@ -2,7 +2,7 @@
     <div>
         <RouterLink v-for="destination in info" :key="destination.id" :to="{name:'destination.show',params:{id:destination.id}}">
             <h2> {{ destination.name }} </h2>
-            <img :src="`/src/assets/images/${destination.image}`" alt="destination.name">
+            <img :src="`/images/${destination.image}`" alt="destination.name">
         </RouterLink>
         <RouterView></RouterView>
     </div>
