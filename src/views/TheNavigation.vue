@@ -1,5 +1,5 @@
 <template>
-    <nav>
+    <nav id="nav">
         <RouterLink v-for="destination in info" :key="destination.id" :to="{name:'destination.show',params:{id:destination.id}}">
             <p> {{ destination.name }} </p>
         </RouterLink>
