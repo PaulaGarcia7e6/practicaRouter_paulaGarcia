@@ -1,19 +1,15 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import TheNavigation from './views/TheNavigation.vue';
 </script>
 
 <template>
-  <header>
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/brazil">Brazil</RouterLink>
-        <RouterLink to="/panama">Panama</RouterLink>
-        <RouterLink to="/hawaii">Hawaii</RouterLink>
-        <RouterLink to="/jamaica">Jamaica</RouterLink>
-      </nav>
+  <div class="body">
+    <header>
+    <TheNavigation></TheNavigation>
   </header>
   <RouterView />
+  </div>
 </template>
 
 <style scoped>
